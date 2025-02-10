@@ -122,7 +122,7 @@ jobs:
         git config --global user.email "gitAction@gmail.com"
         git clone ${{ secrets.PATCH_REPO }}
         export ANDROID_NDK_ROOT=${{ steps.setup-ndk.outputs.ndk-path }}
-        git clone --recurse-submodules https://github.com/frida/frida
+        git clone --recurse-submodules https://github.com/frida/frida.git
         cd frida/subprojects/frida-core
         git am ../../../Patchs/strongR-frida/frida-core/*.patch
     - name: two step patch   
