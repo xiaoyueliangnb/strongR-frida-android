@@ -17,7 +17,7 @@ jobs:
         id: pullFridaLatestRelease
         uses: actions/github-script@v3.1.0
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.KernelPatch}}
           script: |
             const releaseResponse = await github.repos.getLatestRelease({
               owner: 'frida',
