@@ -120,7 +120,7 @@ jobs:
       run: |
         git config --global user.name "gitAction"
         git config --global user.email "gitAction@gmail.com"
-        git clone ${{ secrets.PATCH_REPO }}
+        git clone https://github.com/hluwa/Patchs.git
         export ANDROID_NDK_ROOT=${{ steps.setup-ndk.outputs.ndk-path }}
         git clone --recurse-submodules https://github.com/frida/frida.git
         cd frida/subprojects/frida-core
